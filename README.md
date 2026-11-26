@@ -1,5 +1,3 @@
-# personal-ai-builder-lab
-
 # Personal AI Builder Lab
 
 ### From an idea on your phone to a deployed product — powered by AI agents.
