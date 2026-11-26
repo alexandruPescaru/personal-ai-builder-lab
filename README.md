@@ -1,142 +1,109 @@
 # Personal AI Builder Lab
 
-### From an idea on your phone to a deployed product — powered by AI agents.
+### From a mobile idea to a deployed product. An agentic engineering platform powered by Azure.
 
-[![Status](https://img.shields.io/badge/status-in%20development-orange)]()
-[![AI](https://img.shields.io/badge/AI-agentic%20development-blueviolet)]()
-[![SDLC](https://img.shields.io/badge/SDLC-GitHub%20native-black?logo=github)]()
-[![Budget](https://img.shields.io/badge/operating%20budget-%E2%82%AC20--30%2Fmonth-success)]()
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Status](https://img.shields.io/badge/status-in%20development-orange)
+![Platform](https://img.shields.io/badge/platform-Microsoft%20Azure-0078D4?logo=microsoftazure)
+![Engineering](https://img.shields.io/badge/engineering-GitHub%20native-181717?logo=github)
+![AI](https://img.shields.io/badge/AI-Agentic%20Development-8250df)
+![Budget](https://img.shields.io/badge/Azure%20credit-%E2%82%AC130%2Fmonth-0078D4)
 
-**Personal AI Builder Lab** is a mobile-first, agentic development environment designed to turn ideas into researched, specified, built, tested and deployed software products.
+**Personal AI Builder Lab** is a mobile-first, Azure-powered agentic development environment designed to turn ideas into researched, specified, built, tested and deployed software products.
 
-It combines specialized AI capabilities, reusable agent skills, workflow orchestration and modern developer tooling into a cost-conscious system that supports the complete product development lifecycle.
+It combines AI models, autonomous coding agents, reusable agent skills, workflow orchestration and cloud infrastructure into a practical system for the complete product development lifecycle.
 
-The ambition is simple:
+The ambition:
 
-**Make building software as easy as describing what should exist, without compromising the engineering discipline required to ship it.**
+**Make building software as easy as describing what should exist, while maintaining the engineering discipline required to ship it.**
 
 ---
 
 ## The vision
 
-What if a product idea submitted from your phone could trigger an entire product development workflow?
+An idea submitted from a handheld device should be enough to initiate a complete product development workflow.
 
-You describe a problem. AI agents investigate the opportunity, explore existing solutions, assess technical feasibility and produce a product specification.
+The system researches the opportunity, investigates competitors, assesses technical feasibility and produces a product specification.
 
 A coding agent takes over implementation, creates a feature branch, writes tests and opens a pull request.
 
-Automated quality gates validate the changes. You review the result, approve the release and receive a link to the deployed application.
+Automated quality gates validate the changes. A human reviews the result, approves the release and receives a link to the deployed application.
 
-All while keeping GitHub as the system of record.
+GitHub remains the engineering system of record. Azure provides the execution and AI infrastructure. The human remains in control of consequential decisions.
 
-Personal AI Builder Lab aims to make this workflow repeatable, observable and accessible from anywhere.
-
-## How it works
+## Architecture
 
 ```mermaid
 flowchart TD
-    A["📱 Idea submitted from iPhone"] --> B["🎛️ Workflow orchestration"]
-    B --> C["🔎 Research and discovery"]
-    C --> D["📋 Product specification"]
-    D --> E["🏗️ Architecture and planning"]
-    E --> F["💻 AI-assisted implementation"]
-    F --> G["🧪 Automated quality gates"]
-    G --> H["🔀 GitHub Pull Request"]
-    H --> I{"Human approval"}
-    I -->|Changes requested| F
-    I -->|Approved| J["🚀 Deployment"]
-    J --> K["🌍 Live application"]
+    A["📱Telegram"] --> B["Workflow Orchestration"]
+    B --> C["Research and Product Agents"]
+    C --> D["Azure AI Foundry"]
+    D --> E["PRD and Technical Design"]
+    E --> F["Azure Queue"]
+    F --> G["Container Apps Agent Worker"]
+    G --> H["Codex CLI"]
+    H --> I["GitHub Feature Branch"]
+    I --> J["Pull Request"]
+    J --> K["GitHub Actions"]
+    K --> L{"Human Approval"}
+    L -->|Changes requested| G
+    L -->|Approved| M["Azure Deployment"]
+    M --> N["Live Application"]
 ```
 
-Every meaningful development activity should leave an auditable trace in GitHub.
-
-## Core capabilities
-
-### 1. Mobile-first interaction
-
-Initiate and monitor development workflows from an iPhone.
-
-- Submit ideas using natural language.
-- Start research and development tasks.
-- Monitor execution progress.
-- Receive notifications when agents complete work.
-- Review and approve critical actions.
-
-Initial interaction layer: Telegram.
-
-### 2. Agent-powered product discovery
-
-Turn an initial idea into an evidence-based product opportunity.
-
-- Market and competitor research.
-- Problem and user exploration.
-- Technical feasibility assessment.
-- Opportunity and differentiation analysis.
-- MVP definition and prioritization.
-- Product requirements and acceptance criteria.
-
-Research outputs must distinguish verified evidence from assumptions and hypotheses.
-
-### 3. Autonomous engineering
-
-Delegate implementation to coding agents operating in controlled environments.
-
-- Repository exploration.
-- GitHub issue creation.
-- Feature branch management.
-- Code generation and refactoring.
-- Test generation and execution.
-- Pull request creation.
-- Technical documentation.
-
-The system should support interchangeable coding agents rather than depend on a single vendor.
-
-### 4. Engineering quality and governance
-
-Autonomy does not mean unrestricted execution.
-
-GitHub remains the source of truth for the development lifecycle.
-
-- Feature branches instead of direct commits to `main`.
-- Pull requests for all meaningful changes.
-- Automated testing and linting.
-- Dependency and security checks.
-- Human review before merging.
-- Explicit approval for production releases.
-
-### 5. Continuous deployment
-
-Move from prototype to working application.
-
-- Automated CI/CD through GitHub Actions.
-- Preview environments.
-- Deployment to Cloudflare.
-- Release documentation.
-- Live application URLs.
-
 ## Technology stack
-
-The initial architecture prioritizes proven tools, composability and low operating costs.
 
 | Layer | Technology | Responsibility |
 |---|---|---|
 | Mobile interface | Telegram | Commands and notifications |
-| Orchestration | n8n | Workflow coordination |
-| Coding agent | OpenAI Codex CLI | Software implementation |
-| Agent skills | Agent Skills | Reusable capabilities |
-| Integration | MCP | Tool connectivity |
-| Source control | GitHub | SDLC and governance |
-| CI/CD | GitHub Actions | Automated validation |
-| Hosting | Cloudflare | Application deployment |
-| Infrastructure | Hetzner VPS | Persistent execution |
-| Database | PostgreSQL | Workflow state |
+| Orchestration | n8n Community Edition | Workflow coordination |
+| AI platform | Azure AI Foundry | Model access and inference |
+| Coding agent | OpenAI Codex CLI | Autonomous implementation |
+| Interactive AI | ChatGPT subscription | Human-led coding and experimentation |
+| Azure coding inference | Azure OpenAI | Unattended coding workloads |
+| Agent execution | Azure Container Apps | Isolated container workers |
+| Task messaging | Azure Storage Queue | Asynchronous task dispatch |
+| Workflow database | Azure Database for PostgreSQL | State and execution history |
+| Secrets | Azure Key Vault | Credentials and API keys |
+| Container registry | Azure Container Registry | Private container images |
+| Source control | GitHub | Issues, branches, PRs and releases |
+| CI/CD | GitHub Actions | Automated validation and deployment |
+| Frontend hosting | Azure Static Web Apps | Web application hosting |
+| Backend hosting | Azure Container Apps | APIs and application services |
+| Monitoring | Azure Monitor | Logs and operational visibility |
 
-Technologies are replaceable by design. The architecture should preserve the ability to introduce alternative models, coding agents and orchestration frameworks.
+## Two coding modes
 
-## Agent skills
+The lab supports two complementary execution modes.
 
-Rather than building a collection of isolated agents, the lab uses reusable skills to establish consistent ways of working.
+### Interactive development
+
+Codex CLI authenticates through an existing ChatGPT subscription.
+
+Use cases:
+- Exploring ideas and prototypes.
+- Interactive code generation.
+- Debugging and refactoring.
+- Architecture experimentation.
+- Human-guided development.
+
+### Azure autonomous development
+
+Codex CLI uses an Azure OpenAI model deployment through a custom provider configuration.
+
+Use cases:
+- Asynchronous coding tasks.
+- Automated implementation workflows.
+- Scheduled engineering tasks.
+- Repository maintenance.
+- Agent-driven testing and documentation.
+
+Both modes use reusable skills and GitHub-based workflows.
+
+Azure model deployments are selected according to model availability, Responses API compatibility and cost.
+
+## Agent capabilities
+
+The initial skill library covers:
 
 | Skill | Responsibility |
 |---|---|
@@ -144,42 +111,78 @@ Rather than building a collection of isolated agents, the lab uses reusable skil
 | `product-discovery` | Problem framing and opportunity assessment |
 | `prd-generator` | Product requirements and user stories |
 | `architecture-design` | System architecture and ADRs |
-| `frontend-engineering` | User interface implementation |
+| `frontend-engineering` | UI implementation |
 | `backend-engineering` | API and data implementation |
 | `test-engineering` | Test design and automation |
 | `security-review` | Security and dependency analysis |
 | `github-workflow` | Issues, branches and pull requests |
-| `documentation` | Technical documentation and README generation |
+| `documentation` | Technical documentation |
 
 Skills are version-controlled, reusable and independently maintainable.
 
-## Architecture principles
+## Engineering lifecycle
 
-The project follows a small set of deliberate principles:
+Every project follows a traceable development process:
 
-**Human-in-the-loop autonomy**
+1. Idea submission.
+2. Research and discovery.
+3. Product requirements.
+4. Architecture and technical planning.
+5. GitHub issue creation.
+6. Feature branch creation.
+7. Agent implementation.
+8. Automated testing and security checks.
+9. Pull request and human review.
+10. Approved deployment.
+11. Release documentation.
 
-Agents can research and implement within defined permissions. Humans retain control over consequential decisions, merges and production releases.
+### Engineering guardrails
 
-**GitHub-first development**
+- No direct commits to `main`.
+- Protected branches and mandatory pull requests.
+- Automated CI checks.
+- Isolated coding environments.
+- Restricted GitHub permissions.
+- Secrets managed through Azure Key Vault.
+- GitHub Actions authentication through OIDC.
+- Explicit human approval for production releases.
 
-Requirements, issues, branches, pull requests, checks and releases remain traceable.
+## Azure architecture
 
-**Composable intelligence**
+Azure is the infrastructure and AI execution platform.
 
-Coding agents, models, skills and orchestration components should be replaceable.
+| Service | Purpose |
+|---|---|
+| Container Apps | n8n and agent execution |
+| Container Apps Jobs | On-demand agent workloads |
+| AI Foundry | AI model management |
+| Azure OpenAI | Model inference for coding and research |
+| PostgreSQL Flexible Server | Persistent workflow state |
+| Storage Account | Task queues and project artifacts |
+| Key Vault | Secrets management |
+| Container Registry | Private container images |
+| Azure Monitor | Logs and monitoring |
+| Static Web Apps | Frontend deployment |
 
-**Security by design**
+The architecture uses consumption-based compute wherever practical. Agent workers should scale to zero when idle.
 
-Use isolated execution environments, least-privilege permissions, protected branches and secure secrets management.
+## Cost strategy
 
-**Cost-conscious engineering**
+The target infrastructure budget is the available **€130/month Azure credit**.
 
-Optimize for useful output rather than infrastructure complexity or unnecessary model consumption.
+Target consumption: €95–110/month, with the remaining credit reserved for usage fluctuations.
 
-**Documentation as a deliverable**
+Cost management principles:
 
-Every project should be understandable by another engineer without requiring access to the original agent conversation.
+- Pay-per-token AI inference.
+- No provisioned model capacity.
+- Consumption-based container execution.
+- On-demand coding workers.
+- Small Burstable PostgreSQL instance.
+- Free GitHub and frontend hosting tiers where possible.
+- Execution and token usage tracking.
+
+Existing ChatGPT subscription costs are separate from Azure consumption.
 
 ## Repository structure
 
@@ -198,11 +201,18 @@ personal-ai-builder-lab/
 │   ├── architecture-design/
 │   ├── engineering/
 │   └── security-review/
+├── workers/
+│   ├── codex/
+│   └── shared/
+├── infrastructure/
+│   ├── bicep/
+│   └── scripts/
 ├── templates/
 │   └── project-template/
 ├── docs/
 │   ├── architecture.md
 │   ├── security.md
+│   ├── deployment.md
 │   └── decisions/
 ├── .github/
 │   └── workflows/
@@ -211,92 +221,42 @@ personal-ai-builder-lab/
 └── README.md
 ```
 
-## Operating model
+## Roadmap
 
-The lab is designed for a solo builder working on multiple independent projects.
-
-| Stage | Expected output |
-|---|---|
-| Idea | Problem statement |
-| Research | Opportunity assessment |
-| Discovery | PRD and prioritized backlog |
-| Architecture | Technical design and ADRs |
-| Implementation | Working code and tests |
-| Validation | CI results and reviewable PR |
-| Release | Deployed application |
-| Retrospective | Lessons, metrics and improvements |
-
-Each project should have its own repository, execution context, documentation and deployment configuration.
-
-## Cost efficiency
-
-The target infrastructure budget is **€20–30 per month**, excluding any existing personal subscriptions.
-
-The objective is to demonstrate that a useful agentic development environment does not require an expensive enterprise stack.
-
-Cost management includes:
-
-- One primary coding agent.
-- Open-source workflow orchestration.
-- Free GitHub and hosting tiers where practical.
-- On-demand execution instead of permanently running coding agents.
-- Limited and monitored API usage.
-- Shared infrastructure across personal projects.
-
-## Project roadmap
-
-- [ ] **Foundation:** VPS, Docker, GitHub and secure execution environment.
-- [ ] **Orchestration:** n8n and persistent workflow state.
-- [ ] **Mobile interface:** Telegram bot and command routing.
-- [ ] **Discovery:** Research agent and product specification skills.
-- [ ] **Engineering:** Codex CLI integration and automated PR creation.
-- [ ] **Quality:** Testing, security checks and CI/CD.
-- [ ] **Deployment:** Preview and production environments.
-- [ ] **Portfolio:** First end-to-end demonstration project.
-- [ ] **Evolution:** Multi-agent collaboration and additional skills.
+- [ ] Azure foundation and cost controls.
+- [ ] Container Apps environment.
+- [ ] n8n deployment and PostgreSQL integration.
+- [ ] Telegram command interface.
+- [ ] Azure AI Foundry model deployment.
+- [ ] Interactive and Azure-billed Codex configurations.
+- [ ] Isolated agent execution workers.
+- [ ] GitHub App integration.
+- [ ] GitHub Actions and OIDC.
+- [ ] Automated testing and security gates.
+- [ ] Preview and production deployments.
+- [ ] First end-to-end demonstration project.
 
 ## Success metrics
 
-The lab should measure the effectiveness of its own development process.
-
-| Metric | What it measures |
+| Metric | Purpose |
 |---|---|
-| Cost per completed feature | Development economics |
-| Time from idea to prototype | Product delivery speed |
-| PR acceptance rate | Engineering quality |
+| Cost per completed feature | Engineering economics |
+| Time from idea to prototype | Delivery speed |
+| PR acceptance rate | Code quality |
 | Automated test pass rate | Reliability |
-| Human intervention rate | Degree of autonomy |
+| Human intervention rate | Agent autonomy |
 | Deployment success rate | Delivery reliability |
 | Research source coverage | Evidence quality |
+| Azure consumption per project | Infrastructure efficiency |
 
 ## Why this project?
 
-AI-assisted coding is becoming increasingly accessible. The more interesting challenge is designing a system that can reliably connect discovery, product thinking, engineering execution and software delivery.
+AI-assisted coding is becoming increasingly accessible. The more interesting challenge is designing systems that reliably connect discovery, product thinking, engineering execution and software delivery.
 
-This project explores that challenge through practical experimentation.
+Personal AI Builder Lab explores that challenge through practical experimentation with agentic AI, Azure infrastructure, reusable skills and human-agent collaboration.
 
-It is also an evolving demonstration of AI Builder capabilities:
-
-- Applying agentic AI to real product development.
-- Designing human-agent collaboration.
-- Evaluating models, tools and reusable skills.
-- Building reliable workflows around autonomous execution.
-- Balancing speed, quality, security and cost.
-
-The goal is not to maximize the number of agents.
-
-**The goal is to maximize the amount of useful software that can be shipped responsibly.**
+**The goal is not to maximize the number of agents. It is to maximize the amount of useful software that can be shipped responsibly.**
 
 ---
 
-## Project status
-
-Personal AI Builder Lab is under active development.
-
-The initial focus is establishing the infrastructure, mobile command interface and GitHub-native development workflow before expanding the agent ecosystem.
-
-Contributions, ideas and discussions are welcome.
-
----
-
-*Built as a practical exploration of agentic software development, product engineering and the future of AI-powered building.*
+*An evolving exploration of agentic software development, cloud engineering and the future of AI-powered building.*
